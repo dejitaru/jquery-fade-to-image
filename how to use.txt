@@ -1,0 +1,28 @@
+HTML
+<div id="controles">
+    <a href="https://dl.dropbox.com/u/3033682/casa1.jpg">Foto1</a>
+    <a href="https://dl.dropbox.com/u/3033682/casa2.jpg">Foto2</a>
+    <a href="https://dl.dropbox.com/u/3033682/casa3.jpg">Foto3</a>
+</div>
+
+<div id="area_imagen">
+    <img src="https://dl.dropbox.com/u/3033682/casa1.jpg" />  
+</div>   
+====================================================================
+CSS
+#area_imagen{position:relative;}
+#area_imagen img{position:absolute;z-index:1}
+#area_imagen img._active_{position:absolute; z-index:2}
+.next_image{ position:absolute; z-index:0;}
+​====================================================================
+JS
+$(document).ready(function() {
+      $('#controles a').fadeToimage({
+        'container': '#area_imagen'
+        });    
+
+});
+
+
+Working example
+http://jsfiddle.net/dejitaru/QzsNm/4/
